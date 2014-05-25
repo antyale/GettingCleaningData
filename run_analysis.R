@@ -9,8 +9,8 @@ if (!file.exists("dataset.zip"))
 unzip("dataset.zip")
 
 
-##This function will read the corresponding files
-##Returns the 
+## This function will read the corresponding files and return the dataset with subject, 
+## activity name, mean and std columns
 loadDatasetPrepared <- function(dataset)
 {
     ##get the folders and files paths needed
