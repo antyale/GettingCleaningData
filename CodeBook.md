@@ -1,5 +1,19 @@
+# Study design
+This is a clean dataset from the Human Activity Recognition database built from the recordings of 30 subjects performing activities of daily living (ADL) 
+while carrying a waist-mounted smartphone with embedded inertial sensors. You can find the datasets and more information about how they were gathered in [http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones].
+
+The steps followed to create the clean dataset are:
+- Extracts only the measurements on the mean and standard deviation for each measurement
+- Add the descriptive activity names to the measurement datasets
+- Add the subject to the measurement datasets
+- Merge the training and the test datasets
+- Calculates average of each variable for each activity and each subject 
+
+# Code Book
 1. subject
+* Represents the person who performed the activity. Its range is from 1 to 30.
 1. activity.name
+* Its value is one of the following list{WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING}
 1. tBodyAcc.mean.X
 1. tBodyAcc.mean.Y
 1. tBodyAcc.mean.Z

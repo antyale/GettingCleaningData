@@ -2,7 +2,10 @@
 require(plyr)
 
 ##download and unzip the data
-download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip","dataset.zip")
+if (!file.exists("dataset.zip"))
+{
+    download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip","dataset.zip")
+}
 unzip("dataset.zip")
 
 
@@ -43,6 +46,10 @@ loadDatasetPrepared <- function(dataset)
     ##Combine all in one dataset and return it
     data$activity.name <- unlist(activity$activity.name)
     data$subject <- unlist(subject)
+    
+    ##remove unnecessary dots from colnames
+    colnames(data) <- gsub("\\.\\.\\.",".",colnames(data))
+    colnames(data) <- gsub("\\.\\.","",colnames(data))
     
     data
 }
