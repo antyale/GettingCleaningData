@@ -11,9 +11,9 @@ The steps followed to create the clean dataset are:
 
 # Code Book
 1. subject
-* Represents the person who performed the activity. Its range is from 1 to 30.
+  * Represents the person who performed the activity. Its range is from 1 to 30.
 1. activity.name
-* Its value is one of the following list{WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING}
+  * Its value is one of the following list{WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING}
 1. tBodyAcc.mean.X
 1. tBodyAcc.mean.Y
 1. tBodyAcc.mean.Z
